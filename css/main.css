@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
 @property --rotate {
     syntax: "<angle>";
     initial-value: 132deg;
@@ -12,7 +14,8 @@
   
   body {
     min-height: 100vh;
-    background: #212534;
+    background-image: url(/gggrain.svg);
+    background-size: cover;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -26,9 +29,9 @@
     background: #191c29;
     width: var(--card-width);
     height: var(--card-height);
-    padding: 3px;
+    padding: 2em 1em 2em 1em;
     position: relative;
-    border-radius: 6px;
+    border-radius: 1em;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -40,7 +43,7 @@
   }
   
   .card:hover {
-    color: rgb(88 199 250 / 100%);
+    color: rgb(93, 250, 88);
     transition: color 1s;
   }
   .card:hover:before, .card:hover:after {
@@ -48,6 +51,13 @@
     opacity: 0;
   }
   
+  .heading {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.25rem;
+    font-family: 'Oxygen', sans-serif;
+    
+  }
   
   .card::before {
     content: "";
@@ -56,7 +66,7 @@
     border-radius: 8px;
     background-image: linear-gradient(
       var(--rotate)
-      , #5ddcff, #3c67e3 43%, #4e00c2);
+      , #62ff5d, #3ce3e3 43%, #fde13e);
       position: absolute;
       z-index: -1;
       top: -1%;
